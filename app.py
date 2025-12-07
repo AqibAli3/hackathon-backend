@@ -1,3 +1,6 @@
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
+client = QdrantClient(os.getenv("QDRANT_URL", "http://localhost:6333"))
 from fastapi import FastAPI
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
